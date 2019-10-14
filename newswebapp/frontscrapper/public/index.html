@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <base href="/">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/203fd6642e.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+
+    <script src="../js/module.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/model.js"></script>
+    <script src="../js/controller.js"></script>
+
+
+
+
+</head>
+
+<body ng-app="myapp" style="background:whitesmoke">
+    <div style="width: 100%;height:50px;background:orange;margin:0%;padding: 0px">
+
+        <nav class="navbar navbar-dark bg-primary">
+
+            <a class="navbar-brand" href="#">#NewsFeed</a>
+
+            <input class="form-control" ng-model="search" type="text" style="width: 20% ;float:right"
+                placeholder="Search news here...">
+
+        </nav>
+
+
+    </div>
+    <hr>
+    <ul class="list-group list-group-horizontal-lg " style="justify-content: center; display: flex;">
+        <button>
+            <a ng-href="#/home" style="color:black" class="btn btn-info">
+                <li class="list-group-item">Home</li>
+            </a>
+        </button>
+        <button>
+            <a ng-href="#/worldsNews" style="color:black" class="btn btn-info">
+                <li class="list-group-item">WorldsNews</li>
+            </a>
+        </button>
+        <button>
+            <a ng-href="#/cricket" style="color:black" class="btn btn-info">
+                <li class="list-group-item">Cricket</li>
+            </a>
+        </button>
+        </button><button>
+            <a ng-href="#/entertaiment" style="color:black" class="btn btn-info">
+                <li class="list-group-item">Entertaiment</li>
+            </a>
+        </button>
+        <button>
+            <a ng-href="#/opinion" style="color:black" class="btn btn-info">
+                <li class="list-group-item">Opinion</li>
+            </a>
+        </button>
+        <button>
+            <a ng-href="#/crud" style="color:black" class="btn btn-info">
+                <li class="list-group-item">CRUD</li>
+            </a>
+        </button>
+    </ul>
+
+    <fieldset>
+        <legend></legend>
+        <ng-view></ng-view>
+    </fieldset>
+</body>
+
+</html>

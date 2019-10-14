@@ -1,0 +1,24 @@
+{
+  "name": "scapper",
+  "version": "0.0.1",
+  "description": "a website that took data from other websites",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ayush chauhan",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.10",
+    "node-cron": "^2.0.3",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0",
+    "puppeteer": "^1.19.0",
+    "sendotp": "^1.2.9"
+  }
+}

@@ -1,0 +1,22 @@
+<div ng-controller='worldsNews'>
+    <h1 style="color:darkgreen">More from World</h1>
+    <ul>
+        <h1 ng-if="worldNews.length==0">Oops No news .. check some other news</h1>
+
+        <li style="list-style-type: none;display: inline-block;" ng-repeat="news in worldNews | filter:search">
+
+            <div class="card" style="width: 18rem;">
+                <img ng-src="{{news.imageUrl}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{news.newsHeading}}</h5>
+                    <p class="card-text">{{news.news}}</p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+
+        </li>
+
+    </ul>
+
+
+</div>

@@ -1,0 +1,19 @@
+<div ng-controller='crud'>
+    <ul>
+        <h1 ng-if="localData.length==0">Oops No news .. check some other news</h1>
+        <li style="list-style-type: none;display: inline-block;" ng-repeat="news in localData  | filter:search">
+
+            <div class="card" style="width: 18rem;">
+                <img ng-src="{{news.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{news.heading}}</h5>
+                    <p class="card-text">{{news.data}}</p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+
+        </li>
+
+    </ul>
+
+</div>

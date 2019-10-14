@@ -1,0 +1,73 @@
+<div ng-controller='crud'>
+    <div>
+        <h1>CRUD</h1>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Id</span>
+            </div>
+            <input type="text" class="form-control" ng-model="id"
+                aria-label="Dollar amount (with dot and two decimal places)" ng-disabled='true'>
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Heading</span>
+            </div>
+
+            <textarea class="form-control" ng-model="heading" aria-label="With textarea"
+                placeholder="Type News heading here..." required></textarea>
+        </div><br><br>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">News Data</span>
+            </div>
+            <textarea required class="form-control" ng-model="data" aria-label="With textarea"
+                placeholder="Type News information here..." required></textarea>
+        </div>
+        <br><br>
+        <div class="custom-file">
+            <input type="file" file-input="files" accept="image/*" required>
+            <!-- <button>add</button> -->
+        </div>
+    </div><br><br>
+    <ul class="list-group list-group-horizontal-lg " style="justify-content: center; display: flex;">
+        <li class="list-group-item"><button ng-click="add()" class="btn btn-info" ng-disabled='!heading.length>0'
+                ng-disabled='!data.length>0 '><i class="fas fa-plus-square mr-3"></i>ADD</button>
+        </li>
+
+
+        <li class="list-group-item"><button ng-click="load()" class="btn btn-info"><i
+                    class="fas fa-download mr-3"></i>LOADNEWS</button></li>
+
+
+        <li class="list-group-item"> <button ng-click="update()" ng-disabled='check' class="btn btn-info"><i
+                    class="fas fa-pen-alt mr-3"></i>UPDATE</button></li>
+
+
+    </ul>
+    <br><br>
+    <hr>
+    <hr>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Data</th>
+                <th scope="col">image</th>
+                <th scope="col">Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in localData track by $index">
+                <th scope="row">{{data.id}}</th>
+                <td>{{data.heading}}</td>
+                <td>{{data.data}}</td>
+                <td><img ng-src="{{data.url}}" alt="Image"></td>
+                <td><i class="fas fa-trash-alt mr-3" ng-click="remove($index)" style="cursor: pointer "></i><i
+                        class="fas fa-edit" ng-click="edit($index)" style="cursor: pointer "></i></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
